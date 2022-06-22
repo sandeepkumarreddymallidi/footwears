@@ -31,7 +31,7 @@ public class PreparedStatementCrudOperation {
 	public String  updateOperation(String query,Connection connection,int id,int age) throws SQLException{
 		PreparedStatement st=connection.prepareStatement(query);
 		st.setInt(1,id);
-		st.setInt(3, age);
+		st.setInt(2, age);
 		st.executeUpdate();
 		return "values updated";
 	}

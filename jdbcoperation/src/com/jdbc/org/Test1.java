@@ -13,7 +13,7 @@ public class Test1 {
 			while(x<5&x!=0)
 			{
 				if(x==1) {
-					String i=stdo.createOperation("create table employee8(eid integer,ename varchar(20),eage integer,edept varchar(20))", conn);
+					String i=stdo.createOperation("create table employee10(eid integer,ename varchar(20),eage integer,edept varchar(20))", conn);
 					System.out.println(i);
 				}
 				if(x==2) {
@@ -21,17 +21,17 @@ public class Test1 {
 					String name=sc.next();
 					int age=sc.nextInt();
 					String dept=sc.next();
-					String i=stdo.insertOperation("insert into employee8 values(?,?,?,?)", conn,id,name,age,dept);
+					String i=stdo.insertOperation("insert into employee10 values(?,?,?,?)", conn,id,name,age,dept);
 					System.out.println(i);
 				}
 				if(x==3) {
 					int id=sc.nextInt();
 					int age=sc.nextInt();
-					String i=stdo.updateOperation("update employee8 set eage=? where eid=?", conn,id,age);
+					String i=stdo.updateOperation("update employee10 set eage=? where eid=?", conn,id,age);
 					System.out.println(i);
 				}
 				if(x==4) {
-					ResultSet rs1=stdo.selectOperation("Select *from employee8", conn);
+					ResultSet rs1=stdo.selectOperation("Select *from employee10", conn);
 					while(rs1.next()) {
 						System.out.println(rs1.getInt(1)+" "+rs1.getString(2)+" "+rs1.getInt(3)+" "+rs1.getString(4));
 					}

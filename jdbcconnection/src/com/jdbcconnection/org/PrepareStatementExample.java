@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class  {
+public class PrepareStatementExample {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		
