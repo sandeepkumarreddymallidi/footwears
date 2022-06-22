@@ -53,13 +53,13 @@
                     <li><a href="applyforleave.html">apply for leave</a></li>
                     <li><a href="viewstatus.jsp">leave status</a></li>
                     <li>remaining leaves</li>
-                    <li><a href="./emmployeelogin.jsp">logout</a></li>
+                    <li><a href="./employeelogin.jsp">logout</a></li>
                 </ul>
             </div>
     </div>
 
 <table border="2" width="400" height="200" cellpadding="20" align="center">
-<tr><td>id</td><td>name</td><td>email</td><td>mobile</td><td>age</td><td>department</td><td>reason</td><td>no of days</td><td>from</td><td>to</td><td>status</td></tr>
+<tr><td>id</td><td>name</td><td>email</td><td>mobile</td><td>age</td><td>department</td><td>from</td><td>to</td><td>no of days</td><td>reason</td><td>status</td></tr>
 <%
 Connection con=DbConnection.getConnection();
                     		int id=(Integer) session.getAttribute("eid");
@@ -68,7 +68,7 @@ Connection con=DbConnection.getConnection();
     						ResultSet rs=ps.executeQuery();
 							while(rs.next())
 							{%>
-							<tr><td><%=rs.getInt(1) %></td><td><%=rs.getString(2) %></td><td><%=rs.getString(3) %></td><td><%=rs.getString(4) %></td><td><%=rs.getInt(5) %></td><td><%=rs.getString(6) %><td><%=rs.getString(7) %></td><td><%=rs.getInt(8) %></td><td><%=rs.getString(9) %></td><td><%=rs.getString(10) %></td><td><%=rs.getString(11) %></td></tr>
+							<tr><td><%=rs.getInt(1) %></td><td><%=rs.getString(2) %></td><td><%=rs.getString(3) %></td><td><%=rs.getString(4) %></td><td><%=rs.getInt(5) %></td><td><%=rs.getString(6) %><td><%=rs.getString(7) %></td><td><%=rs.getString(8) %></td><td><%=rs.getInt(9) %></td><td><%=rs.getString(10) %></td><td><%=rs.getString(11) %></td></tr>
 							<% }
 
 								%>

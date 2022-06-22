@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            date operation
+        </title>
+        <script>
+            function f1(){
+               var d1= document.getElementById("dateid1").value;
+               var d2= document.getElementById("dateid2").value;
+               var date1=new Date(d1);
+               var date2=new Date(d2);
+               var time_difference=date2.getTime()-date1.getTime();
+               var time=time_difference/(1000*60*60*24);
+
+                document.getElementById("nod").value=time;
+            }
+        </script>
+    </head>
+    <body>
+    <form action="./enterdata.jsp" method="post">
+        <input type="date" name="fromd" id="dateid1" >from</br>
+        <input type="date" name="tod" id="dateid2" onchange="f1()">to</br>
+        <input type="number" name="num" id="nod">
+        <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

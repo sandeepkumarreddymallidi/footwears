@@ -59,7 +59,7 @@
     </div>
 
 <table border="2" width="400" height="200" cellpadding="20" align="center">
-<tr><td>id</td><td>name</td><td>email</td><td>mobile</td><td>age</td><td>department</td><td>reason</td><td>no of days</td><td>from</td><td>to</td><td>status</td></tr>
+<tr><td>id</td><td>name</td><td>email</td><td>mobile</td><td>age</td><td>department</td><td>from</td><td>to</td><td>no of days</td><td>reason</td><td>status</td></tr>
 <%
 Connection con=DbConnection.getConnection();
 PreparedStatement ps=con.prepareStatement("select * from employeeleavetable");
@@ -72,8 +72,8 @@ HttpSession hs=request.getSession();
 <tr><td><%=rs.getInt(1) %></td><td><%=rs.getString(2) %></td>
 <td><%=rs.getString(3) %></td><td><%=rs.getString(4) %></td>
 <td><%=rs.getInt(5) %></td><td><%=rs.getString(6) %></td>
-<td><%=rs.getString(7) %></td><td><%=rs.getInt(8) %></td>
-<td><%=rs.getString(9) %></td><td><%=rs.getString(10) %></td>
+<td><%=rs.getString(7) %></td><td><%=rs.getString(8) %></td>
+<td><%=rs.getInt(9) %></td><td><%=rs.getString(10) %></td>
 <td><%=rs.getString(11) %></td>
 <td><a href="givingpremission.jsp?eid=<%=rs.getInt(1)%>">click here</a></td></tr>
 <% 

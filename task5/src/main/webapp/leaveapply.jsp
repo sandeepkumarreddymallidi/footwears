@@ -7,10 +7,10 @@
     String ephonenumber=request.getParameter("ephonenumber");
     int eage=Integer.parseInt(request.getParameter("eage"));
     String edept=request.getParameter("edept");
-    String ereason=request.getParameter("ereason");
-    int nod=Integer.parseInt(request.getParameter("nod"));
     String eform=request.getParameter("eform");
     String eto=request.getParameter("eto");
+    int nod=Integer.parseInt(request.getParameter("nod"));
+    String ereason=request.getParameter("ereason");
     String estatus=request.getParameter("estatus");
 	Connection conn=DbConnection.getConnection();
 	PreparedStatement ps=conn.prepareStatement("insert into employeeleavetable values(?,?,?,?,?,?,?,?,?,?,?)");
@@ -20,10 +20,10 @@
 	ps.setString(4,ephonenumber);
 	ps.setInt(5,eage);
 	ps.setString(6,edept);
-	ps.setString(7,ereason);
-	ps.setInt(8,nod);
-	ps.setString(9,eform);
-	ps.setString(10,eto);
+	ps.setString(7,eform);
+	ps.setString(8,eto);
+	ps.setInt(9,nod);
+	ps.setString(10,ereason);
 	ps.setString(11,estatus);
 	int i=ps.executeUpdate();
 	if(i!=0)

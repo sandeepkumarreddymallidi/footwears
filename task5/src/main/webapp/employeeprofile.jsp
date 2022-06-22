@@ -53,7 +53,7 @@
                     <li><a href="applyforleave.html">apply for leave</a></li>
                     <li><a href="#">leave status</a></li>
                     <li>remaining leaves</li>
-                    <li><a href="./emmployeelogin.jsp">logout</a></li>
+                    <li><a href="./employeelogin.jsp">logout</a></li>
                 </ul>
             </div>
     </div>
