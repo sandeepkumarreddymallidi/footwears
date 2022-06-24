@@ -13,7 +13,7 @@ public class StringExample {
 		System.out.println(str2.codePointAt(1));
 		System.out.println(str.hashCode());
 		System.out.println(str.toUpperCase());
-		System.out.println(str.toLowerCase());
+		System.out.println(str2.toLowerCase());
 		System.out.println(Pattern.matches(str, str2));
 		
 	}

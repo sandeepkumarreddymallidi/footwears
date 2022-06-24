@@ -1,0 +1,11 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.hibernate2.org.Student2">
+<id name="id" column="id"></id>
+<property name="name" column="name"></property>
+<property name="percentage" column="percentage"></property>
+<property name="dept" column="dept"></property>
+</class>
+</hibernate-mapping>
